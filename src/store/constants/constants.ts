@@ -1,4 +1,5 @@
 export const CONTROL_NAVIGATION = "Управление навигацией";
+
 export const ADD_NUMBER_TASKS = "Увеличить количество задач";
 export const ADD_NUMBER_DELETE_TASKS = "Увеличить количество удаленных задач";
 export const ADD_NUMBER_EDIT_TASKS = "Увеличить количество отредактированных задач";

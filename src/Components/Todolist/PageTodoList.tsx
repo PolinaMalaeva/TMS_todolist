@@ -17,14 +17,15 @@ function PageTodoList() {
     const list = useSelector((store: any) => store.list.list);
 
     const handleOnChange = (e: (React.ChangeEvent<HTMLElement>)) => {
+        if (errorInput.current) errorInput.current.style.cssText = `opacity: 0; z-index:-1`;
         if (e.target.constructor.name === 'HTMLInputElement') {
             inputTitle.current!.style.border = '';
-            if ((e.target as HTMLInputElement).value.match(/\d/)) {
-                if (errorInput.current) {
-                    errorInput.current.style.cssText = `opacity: 1; z-index:10`;
-                    setTimeout(() => errorInput.current!.style.cssText = `opacity: 0; z-index:-1`,5000)
-                    return;
-                }
+            if ((e.target as HTMLInputElement).value.match(/\d/) && errorInput.current) {
+                errorInput.current.style.cssText = `opacity: 1; z-index:10`;
+                setTimeout(() => {
+                    if (errorInput.current) errorInput.current.style.cssText = `opacity: 0; z-index:-1`;
+                }, 3000)
+                return;
             }
             setTitle((e.target as HTMLInputElement).value);
         }
@@ -55,10 +56,10 @@ function PageTodoList() {
     }, [list[0]])
 
     useEffect(() => {
-        if(JSON.stringify(list) != localStorage.getItem('list')!) {
+        if (JSON.stringify(list) != localStorage.getItem('list')!) {
             dispatch(actions.timeLastTasks({list}));
         }
-    }, [list[list.length-1]])
+    }, [list[list.length - 1]])
 
     useEffect(() => {
         localStorage.setItem('list', JSON.stringify(list));

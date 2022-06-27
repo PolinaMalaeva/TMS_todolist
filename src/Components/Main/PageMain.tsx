@@ -1,8 +1,9 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
-function PageMain() {
+function PageMain(props: { handlePath: () => void }) {
     return (
-        <div className='wrap_main'>
+        <div className='wrap_main observer'>
             <h1 className='title'>
                 Почему составлять списки дел полезно, даже если вы их не выполняете
             </h1>
@@ -29,7 +30,7 @@ function PageMain() {
                 выполняемых
                 ежедневно, еженедельно и ежемесячно.
             </p>
-            <p>
+            <p className="end">
                 <b>В-третьих</b>, список задач помогает выявить в вашем рабочем календаре «сорняки», которые вы не
                 замечали
                 раньше.
@@ -39,6 +40,9 @@ function PageMain() {
                 не
                 полностью заполнен. Добавьте в него задачи, которые помогут реализовать долгосрочные цели.
             </p>
+            <Link to="/PageTodoList" className="btn_todolist" onClick={props.handlePath}>
+                Создать свой список дел
+            </Link>
         </div>
     )
 }

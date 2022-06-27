@@ -113,11 +113,12 @@
 
   .time_adding_first, .time_adding_last {
     .value {
+      text-align: center;
       max-width: 115px;
-      margin-left: 5px;
-      font-family: system-ui;
-      font-size: 27px;
-      line-height: 23px;
+      margin-left: 18px;
+      font-family: monospace;
+      font-size: 28px;
+      line-height: 30px;
       font-weight: 600;
     }
   }

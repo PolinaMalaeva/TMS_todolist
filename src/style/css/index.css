@@ -76,8 +76,6 @@ body {
   color: inherit;
 }
 .nav .elem {
-  /*width: $elem_wh;
-  height: $elem_wh;*/
   background: #6884be;
   border-radius: 10px;
   padding: 10px;
@@ -92,7 +90,7 @@ body {
   box-shadow: 0 0 5px white;
   cursor: pointer;
 }
-.nav .elem svg {
+.nav .elem img {
   display: block;
   margin: 0 auto;
   width: 40px;
@@ -106,6 +104,24 @@ body {
   line-height: 40px;
   margin: 0 auto 70px;
   color: #282c34;
+}
+
+.btn_todolist {
+  display: block;
+  width: max-content;
+  margin: 50px auto 0;
+  padding: 30px 80px;
+  border-radius: 15px;
+  background: #282c34;
+  font-family: cursive;
+  font-size: 30px;
+  color: #e8e8e8;
+  text-decoration: none;
+  transition: 300ms;
+}
+.btn_todolist:hover {
+  background: #4a5262;
+  color: black;
 }
 
 /*# sourceMappingURL=index.css.map */

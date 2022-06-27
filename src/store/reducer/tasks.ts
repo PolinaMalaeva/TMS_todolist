@@ -1,7 +1,6 @@
 import * as constants from "../constants/constants";
 
 const stateApp = {
-    isHidden: <boolean>false,
     numberTasks: <number>+localStorage.getItem('numberTasks')! || 0,
     numberDeleteTasks: <number>+localStorage.getItem('numberDeleteTasks')! || 0,
     numberEditTasks: <number>+localStorage.getItem('numberEditTasks')! || 0,
@@ -12,9 +11,8 @@ const stateApp = {
 let repeat: number[] = JSON.parse(localStorage.getItem('repeatEditTasks')!) || [];
 let numberLastTask = 0;
 
-export default function navAndTasks(
+export default function tasks(
     state: {
-        isHidden: boolean;
         numberTasks: number;
         numberDeleteTasks: number;
         numberEditTasks: number | undefined;
@@ -28,11 +26,6 @@ export default function navAndTasks(
     const {type, payload} = action;
 
     switch (type) {
-        case constants.CONTROL_NAVIGATION:
-            return {
-                ...state,
-                isHidden: !state.isHidden
-            }
         case constants.ADD_NUMBER_TASKS:
             return {
                 ...state,
