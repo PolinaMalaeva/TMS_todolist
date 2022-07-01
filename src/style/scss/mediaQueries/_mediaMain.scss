@@ -1,0 +1,36 @@
+@mixin wMax_910 {
+  @media all and (max-width: 910px) {
+    .btn_todolist {
+      font-size: 25px;
+      padding: 25px 60px;
+    }
+  }
+}
+
+@mixin wMax_650 {
+  @media all and (max-width: 650px) {
+    .btn_todolist {
+      font-size: 20px;
+      padding: 20px 40px;
+    }
+  }
+}
+
+@mixin wMax_495 {
+  @media all and (max-width: 495px) {
+    .btn_todolist {
+      font-size: 15px;
+      padding: 10px 30px;
+    }
+  }
+}
+
+@mixin wMax_365 {
+  @media all and (max-width: 365px) {
+    .btn_todolist {
+      max-width: 200px;
+      text-align: center;
+    }
+  }
+}
+

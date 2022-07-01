@@ -62,8 +62,9 @@ function List(props: { errorInput: React.RefObject<HTMLDivElement>; }): JSX.Elem
             if ((e.target as HTMLInputElement).value.match(/\d/)) {
                 props.errorInput.current!.style.cssText = `opacity: 1; z-index:10`;
                 return (setTimeout(() => {
-                    if (props.errorInput.current) props.errorInput.current!.style.cssText = `opacity: 0; z-index:-1`},
-                        3000))
+                        if (props.errorInput.current) props.errorInput.current!.style.cssText = `opacity: 0; z-index:-1`
+                    },
+                    3000))
             }
             activeTask!.value.title.title = e.target.value;
         } else {

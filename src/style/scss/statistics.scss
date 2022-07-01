@@ -1,3 +1,5 @@
+@import "mediaQueries/mediaStatistics";
+
 @keyframes appearanceItem {
   from {
     margin-left: -180%;
@@ -16,6 +18,13 @@
   to {
     margin-right: 0;
   }
+}
+
+.wrap_statistics {
+  position: absolute;
+  right: 35%;
+  padding: 40px;
+  transform: translate(50%, 0);
 }
 
 .statistics_list {
@@ -57,6 +66,7 @@
     position: relative;
     right: 0;
     max-width: 350px;
+    width: 100%;
     animation-duration: 3s;
     animation-name: appearanceImg;
   }
@@ -123,3 +133,6 @@
     }
   }
 }
+
+@include wMax_1105;
+@include wMax_445;

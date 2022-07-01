@@ -1,0 +1,116 @@
+@mixin wMax_1025 {
+  @media all and (max-width: 1025px) {
+    .wrap_todolist {
+      position: absolute;
+      right: 40px;
+      padding-bottom: 80px;
+    }
+  }
+}
+
+@mixin wMax_935 {
+  @media all and (max-width: 935px) {
+    .wrap_todolist {
+      max-width: 485px;
+      right: 40%;
+      transform: translate(50%, 0);
+    }
+
+    .inputs {
+      .input_title, .input_description {
+        min-width: 350px;
+        width: 350px;
+      }
+    }
+  }
+}
+
+@mixin wMax_630 {
+  @media all and (max-width: 630px) {
+    .wrap_todolist {
+      max-width: 340px;
+      right: 43%;
+    }
+
+    .inputs {
+      margin-top: -20px;
+
+      & > div:first-child {
+        margin-right: 20px;
+      }
+
+      .input_title, .input_description {
+        min-width: 250px;
+        width: 250px;
+        padding: 10px 20px;
+        font-size: 15px;
+      }
+
+      .input_description {
+        min-height: 150px;
+      }
+
+      .btn {
+        width: 70px;
+      }
+    }
+
+    .task {
+      padding: 10px 90px 10px 25px;
+    }
+
+    .task_title, .task_description, .task_edit {
+      font-size: 18px;
+    }
+
+    .edit, .delete {
+      svg {
+        width: 35px;
+      }
+    }
+  }
+}
+
+@mixin wMax_450 {
+  @media all and (max-width: 450px) {
+    .wrap_todolist {
+      right: 40%;
+      max-width: 260px;
+    }
+
+    .inputs {
+
+      & > div:first-child {
+        margin-right: 10px;
+      }
+
+      .input_title, .input_description {
+        min-width: 200px;
+        width: 200px;
+      }
+
+      .btn {
+        width: 50px;
+      }
+    }
+
+    .task_title {
+      margin-bottom: 5px;
+    }
+
+    .edit_title {
+      min-height: 29px;
+    }
+
+    .edit_description {
+      min-height: 27px;
+      margin-top: -2.5px;
+    }
+
+    .error_input {
+      width: 240px;
+      padding: 15px 10px;
+      border-radius: 0 25px;
+    }
+  }
+}

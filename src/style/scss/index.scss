@@ -1,3 +1,4 @@
+@import "mediaQueries/mediaIndex";
 $wrap_w: 1100px;
 $elem_wh: 120px;
 
@@ -29,6 +30,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: stretch;
+  padding: 40px;
 }
 
 .main {
@@ -117,21 +119,10 @@ body {
   color: #282c34;
 }
 
-.btn_todolist {
-  display: block;
-  width: max-content;
-  margin: 50px auto 0;
-  padding: 30px 80px;
-  border-radius: 15px;
-  background: #282c34;
-  font-family: cursive;
-  font-size: 30px;
-  color: #e8e8e8;
-  text-decoration: none;
-  transition: 300ms;
+@include wMax_1100;
+@include wMax_970;
+@include wMax_910;
+@include wMax_830;
+@include wMax_565;
+@include wMax_400;
 
-  &:hover {
-    background: #4a5262;
-    color: black;
-  }
-}

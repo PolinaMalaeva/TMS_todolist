@@ -1,0 +1,44 @@
+.btn_todolist {
+  display: block;
+  width: max-content;
+  margin: 50px auto 0;
+  padding: 30px 80px;
+  border-radius: 15px;
+  background: #282c34;
+  font-family: cursive;
+  font-size: 30px;
+  color: #e8e8e8;
+  text-decoration: none;
+  transition: 300ms;
+}
+.btn_todolist:hover {
+  background: #4a5262;
+  color: black;
+}
+
+@media all and (max-width: 910px) {
+  .btn_todolist {
+    font-size: 25px;
+    padding: 25px 60px;
+  }
+}
+@media all and (max-width: 650px) {
+  .btn_todolist {
+    font-size: 20px;
+    padding: 20px 40px;
+  }
+}
+@media all and (max-width: 495px) {
+  .btn_todolist {
+    font-size: 15px;
+    padding: 10px 30px;
+  }
+}
+@media all and (max-width: 365px) {
+  .btn_todolist {
+    max-width: 200px;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

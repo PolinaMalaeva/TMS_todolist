@@ -1,0 +1,110 @@
+@mixin wMax_1100 {
+  @media all and (max-width: 1100px) {
+    .nav {
+      left: 0;
+      transform: translate(0,0);
+    }
+
+    .main {
+      padding-left: 310px !important;
+    }
+  }
+}
+
+@mixin wMax_970 {
+  @media all and (max-width: 970px) {
+    .main {
+      padding: 40px 0 40px 250px !important;
+    }
+  }
+}
+
+@mixin wMax_910 {
+  @media all and (max-width: 910px) {
+    .nav {
+      padding: 20px;
+    }
+
+    body {
+      font-size: 20px;
+    }
+
+    .title {
+      font-size: 40px;
+      line-height: 38px;
+    }
+
+    .btn_todolist {
+      font-size: 25px;
+      padding: 25px 60px;
+    }
+  }
+}
+
+@mixin wMax_830 {
+  @media all and (max-width: 830px) {
+    .nav {
+      .hidden {
+        display: none;
+      }
+
+      .elem {
+        max-width: 80px !important;
+        max-height: 65px !important;
+      }
+
+      .elem_description {
+        display: none !important;
+      }
+    }
+
+    .main {
+      padding-left: 135px !important;
+    }
+  }
+}
+
+@mixin wMax_565 {
+  @media all and (max-width: 565px) {
+    .nav {
+      padding: 10px !important;
+
+      .elem img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .title {
+      font-size: 30px;
+      line-height: 28px;
+    }
+
+    .main {
+      padding-left: 90px !important;
+    }
+  }
+}
+
+@mixin wMax_400 {
+  @media all and (max-width: 400px) {
+    .main {
+      padding-left: 80px !important;
+    }
+
+    .wrap {
+      padding: 20px;
+    }
+
+    body {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    .title {
+      font-size: 25px;
+      line-height: 23px;
+      margin-bottom: 35px;
+    }
+  }
+}
