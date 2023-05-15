@@ -35,11 +35,11 @@ function Navigation(props: { isHidden: boolean, path: string, handlePath: () => 
                 {(props.isHidden) ? 'Раскрыть' : 'Скрыть'}
             </button>
 
-            <LinkElem isHidden={props.isHidden} path={props.path} to="/" handlePath={props.handlePath} src={home}
+            <LinkElem isHidden={props.isHidden} path={props.path} to="/TMS_todolist/" handlePath={props.handlePath} src={home}
                       textElemDescription="Главная страница"/>
-            <LinkElem isHidden={props.isHidden} path={props.path} to="/PageTodoList" handlePath={props.handlePath}
+            <LinkElem isHidden={props.isHidden} path={props.path} to="/TMS_todolist/PageTodoList" handlePath={props.handlePath}
                       src={tasks} textElemDescription="Составить список задач"/>
-            <LinkElem isHidden={props.isHidden} path={props.path} to="/PageStatistics" handlePath={props.handlePath}
+            <LinkElem isHidden={props.isHidden} path={props.path} to="/TMS_todolist/PageStatistics" handlePath={props.handlePath}
                       src={statistic} textElemDescription="Статистика по задачам"/>
         </div>
     )

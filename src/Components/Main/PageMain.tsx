@@ -40,7 +40,7 @@ function PageMain(props: { handlePath: () => void }) {
                 не
                 полностью заполнен. Добавьте в него задачи, которые помогут реализовать долгосрочные цели.
             </p>
-            <Link to="/PageTodoList" className="btn_todolist" onClick={props.handlePath}>
+            <Link to="/TMS_todolist/PageTodoList" className="btn_todolist" onClick={props.handlePath}>
                 Создать свой список дел
             </Link>
         </div>

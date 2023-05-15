@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css';
 import PageMain from "./Components/Main/PageMain";
@@ -15,15 +15,19 @@ function App() {
         setTimeout(() => setPath(window.location.pathname), 1);
     }
 
+    useEffect(() => {
+        if (path == '/') window.location.replace('/TMS_todolist/')
+    }, [path])
+
     return (
         <BrowserRouter>
             <div className='wrap'>
-                <Navigation isHidden={isHidden} path={path} handlePath={handlePath}/>
+                <Navigation isHidden={isHidden} path={path} handlePath={handlePath} />
                 <div className='main' style={{paddingLeft: (isHidden) ? '240px' : ''}}>
                     <Routes>
-                        <Route path="/" element={<PageMain handlePath={handlePath}/>}/>
-                        <Route path="/PageTodoList" element={<PageTodoList/>}/>
-                        <Route path="/PageStatistics" element={<PageStatistics/>}/>
+                        <Route path="/TMS_todolist/" exact element={<PageMain handlePath={handlePath} />} />
+                        <Route path="/TMS_todolist/PageTodoList" exact element={<PageTodoList />} />
+                        <Route path="/TMS_todolist/PageStatistics" exact element={<PageStatistics />} />
                     </Routes>
                 </div>
             </div>
